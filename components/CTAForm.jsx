@@ -51,11 +51,11 @@ export default function CTAForm({ source = "cancer-insurance" }) {
 
   if (isSuccess) {
     return (
-      <section id="cta-form" className="py-24 md:py-32 bg-surface">
+      <section id="cta-form" className="py-28 md:py-36 bg-[#0F0F0F]">
         <div className="max-w-md mx-auto px-6 text-center">
-          <div className="bg-white rounded-2xl p-10 border border-line">
-            <div className="w-12 h-12 rounded-full bg-[#059669] mx-auto mb-6 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <div className="bg-white rounded-2xl p-10">
+            <div className="w-14 h-14 rounded-full bg-[#059669] mx-auto mb-6 flex items-center justify-center">
+              <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -71,21 +71,21 @@ export default function CTAForm({ source = "cancer-insurance" }) {
   }
 
   return (
-    <section id="cta-form" className="py-24 md:py-32 bg-surface">
+    <section id="cta-form" className="py-28 md:py-36 bg-[#0F0F0F]">
       <div className="max-w-md mx-auto px-6">
         <ScrollAnimation>
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-heading mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               무료 상담 신청
             </h2>
-            <p className="text-body text-[15px]">
+            <p className="text-[#888888] text-[15px]">
               강제 가입 없이, 내 상황에 맞는 보험료만 확인하세요
             </p>
           </div>
         </ScrollAnimation>
 
         <ScrollAnimation delay={150}>
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 border border-line space-y-5">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 space-y-5">
             <div>
               <label className="block text-sm font-medium text-heading mb-2">이름</label>
               <input
@@ -135,7 +135,7 @@ export default function CTAForm({ source = "cancer-insurance" }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark disabled:opacity-50 text-white font-semibold text-[15px] py-4 rounded-xl transition-all duration-300 cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark disabled:opacity-50 text-white font-semibold text-base py-4 rounded-xl transition-all duration-300 cursor-pointer"
             >
               {isSubmitting ? (
                 <Loader2 className="w-5 h-5 animate-spin" />

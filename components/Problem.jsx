@@ -21,11 +21,11 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-28 md:py-36 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-14">
-            <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">Problem</p>
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 font-medium">Problem</p>
             <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight">
               왜 미리 준비해야 할까요?
             </h2>
@@ -34,10 +34,10 @@ export default function Problem() {
 
         <div className="grid md:grid-cols-3 gap-5">
           {problems.map((item, i) => (
-            <ScrollAnimation key={i} delay={i * 100}>
-              <div className="border border-line rounded-2xl p-7 h-full hover:border-[#CCCCCC] transition-colors duration-300">
-                <span className="text-xs font-semibold text-primary tracking-wider">{item.number}</span>
-                <h3 className="text-base font-semibold text-heading mt-3 mb-2">{item.title}</h3>
+            <ScrollAnimation key={i} delay={i * 120}>
+              <div className="bg-surface rounded-2xl p-8 h-full">
+                <span className="inline-block text-xs font-bold text-primary mb-4">{item.number}</span>
+                <h3 className="text-[17px] font-bold text-heading mb-3">{item.title}</h3>
                 <p className="text-sm text-body leading-relaxed">{item.description}</p>
               </div>
             </ScrollAnimation>

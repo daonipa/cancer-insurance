@@ -13,7 +13,7 @@ const problems = [
     icon: Syringe,
     title: "항암·방사선·수술 비용 급증",
     description: "신약 항암제, 표적치료, 면역치료 등 최신 치료법은 효과가 좋지만 비용이 수천만원에 달합니다.",
-    color: "#3182F6",
+    color: "#E8344E",
   },
   {
     icon: CreditCard,
@@ -29,11 +29,11 @@ export default function Problem() {
       <div className="max-w-5xl mx-auto px-5">
         <ScrollAnimation>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[var(--primary)] mb-3 tracking-wide">PROBLEM</p>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
+            <p className="text-sm font-semibold text-primary mb-3 tracking-wide">PROBLEM</p>
+            <h2 className="text-2xl md:text-4xl font-extrabold text-heading mb-4">
               암, 왜 미리 준비해야 할까요?
             </h2>
-            <p className="text-base md:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-body max-w-2xl mx-auto">
               암은 누구에게나 올 수 있고, 치료비는 상상 이상입니다
             </p>
           </div>
@@ -42,15 +42,15 @@ export default function Problem() {
         <div className="grid md:grid-cols-3 gap-6">
           {problems.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 150}>
-              <div className="bg-[var(--bg-section)] rounded-3xl p-8 h-full hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-surface rounded-3xl p-8 h-full hover:shadow-lg transition-shadow duration-300">
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
                   style={{ background: `${item.color}15` }}
                 >
                   <item.icon className="w-7 h-7" style={{ color: item.color }} />
                 </div>
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-3">{item.title}</h3>
-                <p className="text-[var(--text-secondary)] text-sm leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold text-heading mb-3">{item.title}</h3>
+                <p className="text-body text-sm leading-relaxed">{item.description}</p>
               </div>
             </ScrollAnimation>
           ))}

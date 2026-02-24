@@ -31,8 +31,8 @@ export default function Benefits() {
       <div className="max-w-5xl mx-auto px-5">
         <ScrollAnimation>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-[var(--primary)] mb-3 tracking-wide">BENEFITS</p>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
+            <p className="text-sm font-semibold text-primary mb-3 tracking-wide">BENEFITS</p>
+            <h2 className="text-2xl md:text-4xl font-extrabold text-heading mb-4">
               암주요치료비보험, 이런 점이 다릅니다
             </h2>
           </div>
@@ -41,16 +41,16 @@ export default function Benefits() {
         <div className="space-y-4">
           {benefits.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 100}>
-              <div className="flex items-start gap-5 bg-[var(--bg-section)] rounded-2xl p-6 md:p-8 hover:bg-[var(--primary-light)] transition-colors duration-300 group">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[var(--primary)] text-white flex items-center justify-center font-extrabold text-sm group-hover:scale-110 transition-transform duration-300">
+              <div className="flex items-start gap-5 bg-surface rounded-2xl p-6 md:p-8 hover:bg-primary-light transition-colors duration-300 group">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center font-extrabold text-sm group-hover:scale-110 transition-transform duration-300">
                   {item.number}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[var(--text-primary)] mb-1 flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-heading mb-1 flex items-center gap-2">
                     {item.title}
-                    <BadgeCheck className="w-5 h-5 text-[var(--primary)]" />
+                    <BadgeCheck className="w-5 h-5 text-primary" />
                   </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-body leading-relaxed">{item.description}</p>
                 </div>
               </div>
             </ScrollAnimation>

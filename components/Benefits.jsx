@@ -1,5 +1,4 @@
 "use client";
-import { BadgeCheck } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
 const benefits = [
@@ -16,7 +15,7 @@ const benefits = [
   {
     number: "03",
     title: "고액암·소액암 구분 보장",
-    description: "위암, 폐암, 간암 등 고액암과 갑상선암 등 소액암을 구분하여 맞춤 보장 설계가 가능합니다.",
+    description: "위암, 폐암, 간암 등 고액암과 갑상선암 등 소액암을 구분하여 맞춤 보장이 가능합니다.",
   },
   {
     number: "04",
@@ -27,31 +26,22 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-5xl mx-auto px-5">
+    <section className="py-24 md:py-32 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-primary mb-3 tracking-wide">BENEFITS</p>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-heading mb-4">
-              암주요치료비보험, 이런 점이 다릅니다
-            </h2>
-          </div>
+          <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">Benefits</p>
+          <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight mb-16">
+            이런 점이 다릅니다.
+          </h2>
         </ScrollAnimation>
 
-        <div className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
           {benefits.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 100}>
-              <div className="flex items-start gap-5 bg-surface rounded-2xl p-6 md:p-8 hover:bg-primary-light transition-colors duration-300 group">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center font-extrabold text-sm group-hover:scale-110 transition-transform duration-300">
-                  {item.number}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-heading mb-1 flex items-center gap-2">
-                    {item.title}
-                    <BadgeCheck className="w-5 h-5 text-primary" />
-                  </h3>
-                  <p className="text-sm text-body leading-relaxed">{item.description}</p>
-                </div>
+              <div>
+                <span className="text-xs font-semibold text-primary tracking-wider">{item.number}</span>
+                <h3 className="text-lg font-semibold text-heading mt-2 mb-3">{item.title}</h3>
+                <p className="text-[15px] text-body leading-relaxed">{item.description}</p>
               </div>
             </ScrollAnimation>
           ))}

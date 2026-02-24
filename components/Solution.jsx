@@ -28,11 +28,11 @@ export default function Solution() {
           </div>
         </ScrollAnimation>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-14">
+        <div className="grid md:grid-cols-2 gap-6 mb-14">
           {features.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 80}>
-              <div className="bg-white rounded-2xl p-7 shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-300">
-                <h4 className="font-bold text-heading mb-1.5">{item.title}</h4>
+              <div className="bg-white rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-300">
+                <h3 className="text-[17px] font-bold text-heading mb-3">{item.title}</h3>
                 <p className="text-sm text-muted">{item.desc}</p>
               </div>
             </ScrollAnimation>
@@ -43,7 +43,7 @@ export default function Solution() {
           <div className="text-center">
             <button
               onClick={scrollToForm}
-              className="bg-[#111111] hover:bg-black text-white font-semibold px-10 py-4 rounded-full transition-colors duration-300 cursor-pointer"
+              className="bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-4 rounded-full transition-colors duration-300 cursor-pointer"
             >
               무료 설계 받기
             </button>
